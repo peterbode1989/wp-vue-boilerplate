@@ -1,90 +1,89 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import { RouterView } from "vue-router";
+// import Client from "./includes/wp-auth.js";
+// import increment, { useCounterStore } from "./stores/counter.js";
+// console.log(useCounterStore, increment)
+// import from "./stores/modules/auth.js";
+import Header from "./views/Header.vue";
+import Footer from "./views/Footer.vue";
+
+// console.log(Client)
+
+// import apiFetch from "@wordpress/api-fetch";
+// // /wp-json/jwt-auth/v1/token
+
+// async function test() {
+// 	try {
+// 		// const nonce = 'nonce value';
+// 		// apiFetch.use(apiFetch.createNonceMiddleware(nonce));
+
+// 		// const token = await apiFetch({
+// 		// 	path: "/wp-json/jwt-auth/v1/token",
+// 		// 	method: "POST",
+// 		// 	data: {
+// 		// 		'username': 'admin',
+// 		// 		'password': 'admin'
+// 		// 	}
+// 		// });
+// 		// console.log(token)
+// 		// const frontpage = await apiFetch({ path: "/wp-json/jwt-auth/v1/token" });
+// 		// const frontpage = await apiFetch({ path: "/wp-json" });
+
+// 		await apiFetch({
+// 			path: '/wp-json/jwt-auth/v1/token',
+// 			method: 'POST',
+// 			data: {
+// 				username: 'peter',
+// 				password: 'admin'
+// 			},
+// 		}).then((res) => {
+// 			console.log(res);
+
+// 			// 	// const frontpage = await apiFetch({
+// 			// 	// 	path: "/wp-json/wp/v2/settings",
+// 			// 	// 	headers: { Authentication: 'Bearer {res.token}' }
+// 			// 	// });
+// 			// 	// // console.log(frontpage)
+// 		});
+
+// 		const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGFpbHByZXNzLmxvY2FsIiwiaWF0IjoxNjk1MjM4NDY1LCJuYmYiOjE2OTUyMzg0NjUsImV4cCI6MTY5NTg0MzI2NSwiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiMSJ9fX0.pg3gaLYd3sB6U0p3LXUjKO4CTrwYBziVr1d7Av6FULE"
+// 		const frontpage = await apiFetch({
+// 			path: "/wp-json/wp/v2/settings",
+// 			method: "GET",
+// 			headers: { Authentication: `Bearer ${token}` }
+// 		});
+// 		console.log(frontpage)
+// 		// console.log(Object.keys(frontpage.routes))
+// 		// posts.value = frontpage
+// 	} catch (e) {
+// 		// error.value = e;
+// 	}
+// }
+// test();
 </script>
 
+
+
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+	<!-- <header>
+		<img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+		<div class="wrapper">
+			<HelloWorld msg="You did it!" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
+			<nav>
+				<RouterLink to="/">Home</RouterLink>
+			</nav>
+		</div>
+	</header> -->
 
-  <RouterView />
+	<Header></Header>
+
+	<section>
+		<RouterView />
+	</section>
+
+	<Footer></Footer>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+<style scoped></style>

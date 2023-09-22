@@ -1,17 +1,17 @@
 {
-  "name": "wp-vue-boilerplate",
-  "version": "1.0.0",
-  "main": " ",
-  "author": "Moshe Harush <upload770@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "workspaces": [
-    "apps/*"
-  ],
-  "scripts": {
-    "start:docker": "docker-compose up",
-    "start:client": "yarn workspace front dev",
-    "start:all": "yarn start:docker -d && yarn start:client",
-    "stop": "docker-compose down"
-  }
+	"name": "wp-vue-boilerplate",
+	"version": "1.0.0",
+	"main": " ",
+	"author": "Moshe Harush <upload770@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"workspaces": [
+		"apps/*"
+	],
+	"scripts": {
+		"start:docker": "docker compose up",
+		"start:client": "yarn workspace front dev",
+		"start:all": "yarn start:docker -d && yarn start:client",
+		"stop": "docker compose down"
+	}
 }
